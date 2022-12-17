@@ -4,8 +4,8 @@ import Select from 'react-select';
  
  
 const comp = [
-  { label: <Link to="/dashboard" style={{color:'red',textDecoration:'none' }}>Dashboard</Link>},
-  { label: <Link to="/student" style={{ textDecoration:'none'}}>Student</Link>},
+  { label: <Link to="/dashboard" style={{color:'green',textDecoration:'none' }}>Ashish Kumar<br></br>Admin</Link>},
+  { label: <Link to="/student" style={{ color:'green',textDecoration:'none'}}>Ashish Kumar<br></br>Student</Link>},
  
 ];
  
@@ -13,7 +13,10 @@ class DropdowmComp extends Component {
  
   render() {
     return (
-          <Select options={comp} isMulti styles={{backgroundColor:'red'}} /> 
+      <div className="col-3 position-absolute text-align-center">
+          <Select options={comp} isMulti /> 
+          
+       </div>
     );
   }
  

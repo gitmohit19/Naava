@@ -17,21 +17,21 @@ import DropdowmComp from './DropdowmComp';
   return (
             <>
             <div className="col-12 d-flex">
-               <div className="col-4">
+               <div className="col-3">
                 <aside className='bg-success text-white col-2 ' style={{width:'100%',height:'100vh'}}>
                     <CardHeader className='d-flex justify-content-center align-items-center'  >
-                       <img className='mx-2 my-2 rounded' src='../img/img2.png' alt='logo' style={{width:'50px',alignItems:'center' }}/>
+                       <img className=' my-2 rounded' src='../img/img2.png' alt='logo' style={{width:'50px',alignItems:'center' }}/>
                        <img className='my-2 rounded' src='../img/img1.png' style={{width:'50px',alignItems:'center',height:'30px' }} alt='logo'/>
                     </CardHeader>
                    
                     <hr className='p-1 row mx-md-5'/>
-                         <DropdowmComp/>                     
+                         <DropdowmComp/>   
+                         <br></br><br></br><br></br>                  
                     <hr className='p-1 row mx-md-5'/>
                     
                      
 
                     <Menu className='' >
-                    <br></br><br></br><br></br>
                     <Link to="/approval" style={{color:'white' ,textDecoration:'none'}}>Approval</Link>
                     <br></br><br></br><br></br>
                     <Link to="/contact" style={{color:'white' ,textDecoration:'none'}}>Contact us</Link>
@@ -41,7 +41,7 @@ import DropdowmComp from './DropdowmComp';
                     </Menu>
                 </aside>
                 </div>
-                <div className='col-8'>
+                <div className='col-9'>
                 <Routes>
                     <Route path='/dashboard' element={<Dashboard/>}></Route>
                     <Route path='/approval' element={<Approval/>}></Route>
