@@ -1,6 +1,5 @@
 import './App.css';
 import SidebarComp from './Components/SidebarComp';
-
 function App() {
   return (
     <>
@@ -8,8 +7,6 @@ function App() {
       <SidebarComp name="Ashish Kumar" role="Admin"/>
      </div>
     </>
-   
-    
   );
 }
 
