@@ -27,13 +27,13 @@ const DashboardStudent = () => {
                     {
                         JSONDATA.filter(val=>{
                             return search.toLowerCase()==="" ? val :
-                            val.name.toLowerCase().includes(search.toLowerCase())
+                            val.name.toLowerCase().slice(0-4).includes(search.toLowerCase())
 
-                            }).slice(0-13).map((el) => {
+                            }).slice(0-12).map((el) => {
                             return (
                                 <>
                                     <tr className='active' key={el.mobile.toString()+1}>
-                                        <td scope="row">{el.name}</td>
+                                        <td >{el.name}</td>
                                         <td>{el.batch}</td>
                                         <td>{el.location}</td>
                                         <td>{el.experience} year</td>

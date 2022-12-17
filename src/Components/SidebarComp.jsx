@@ -20,7 +20,7 @@ import DropdowmComp from './DropdowmComp';
                <div className="col-3">
                 <aside className='bg-success text-white col-2 ' style={{width:'100%',height:'100vh'}}>
                     <CardHeader className='d-flex justify-content-center align-items-center'  >
-                       <img className=' my-2 rounded' src='../img/img2.png' alt='logo' style={{width:'50px',alignItems:'center' }}/>
+                       <img className='my-2 rounded' src='../img/img2.png' alt='logo' style={{width:'50px',alignItems:'center' }}/>
                        <img className='my-2 rounded' src='../img/img1.png' style={{width:'50px',alignItems:'center',height:'30px' }} alt='logo'/>
                     </CardHeader>
                    

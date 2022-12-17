@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import JASONDATA from '../MOCK_DATA.json'
+
  const Dashboard = () => {
      const obj=[{
         numberOfClient:'Doctors',
@@ -20,8 +20,7 @@ import JASONDATA from '../MOCK_DATA.json'
       numberOfClient:'Total Registered Students',
         roleNo: 1000
      }]
-     const [searchComp,setSearchComp]=useState(false);
-     const [batch,setBatch]=useState(0); 
+     const [searchComp,setSearchComp]=useState("");
 
   return (
             <>
@@ -29,7 +28,7 @@ import JASONDATA from '../MOCK_DATA.json'
          
               <div className='col-12 d-flex justify-content-space-evenly p-2 gap-2 my-4'>
               <input className='col-3' type="text" class="form-control" placeholder="Batch No."
-                onChange={(e)=>setBatch(e.target.value)} aria-describedby="basic-addon2"/>
+               aria-describedby="basic-addon2"/>
                <input className='col-3' type="text" class="form-control" placeholder="Name"
                aria-describedby="basic-addon2"/>
               <input className='col-3' type="text" class="form-control" placeholder="Designation"
@@ -38,30 +37,9 @@ import JASONDATA from '../MOCK_DATA.json'
               </div>
               <br></br>
              <div className='col-12 d-flex justify-content-center flex-wrap gap-4 '>
-               <tbody>
-             {
-                     !searchComp &&  JASONDATA.filter(val=>{
-                            return searchComp.toLowerCase()==="" ? val :
-                            val.name.toLowerCase().includes(searchComp.toLowerCase())
-
-                            }).slice(0-13).map((el) => {
-                            return (
-                                <>
-                                    <tr className='active' key={el.mobile.toString()+1}>
-                                        <td scope="row">{el.name}</td>
-                                        <td>{el.batch}</td>
-                                        <td>{el.location}</td>
-                                        <td>{el.experience} year</td>
-                                        <td>{el.mobile}3</td>
-                                    </tr>
-                                </>
-                            )
-                        })
-                    }
-                    </tbody>
              {
               obj.filter((el)=>{
-               return searchComp.toLowerCase()===""|| batch==='' ? el :
+               return searchComp.toLowerCase()==="" ? el :
                el.numberOfClient.toLowerCase().includes(searchComp.toLowerCase())
 
               }).map((el)=>{

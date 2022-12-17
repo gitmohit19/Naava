@@ -4,7 +4,7 @@ function App() {
   return (
     <>
      <div className="App">
-      <SidebarComp name="Ashish Kumar" role="Admin"/>
+      <SidebarComp/>
      </div>
     </>
   );
